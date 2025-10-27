@@ -2,18 +2,29 @@
 
 declare(strict_types=1);
 
-namespace App\Controller;
+namespace AdminLteForm\Controller;
 
 use Cake\Controller\Controller;
 
 /**
- * Contrôleur pour démontrer l'utilisation du FormBuilder AdminLTE
- *
- * Montre comment utiliser le AdminLteFormHelper pour créer
- * des formulaires avec le style AdminLTE rapidement
+ * FormBuilder Controller
+ * 
+ * Controller demonstrating the usage of the AdminLteForm helper
+ * Shows how to create AdminLTE styled forms with icons and validation
  */
-class FormBuilderController extends AppController
+class FormBuilderController extends Controller
 {
+    /**
+     * Initialization hook method
+     */
+    public function initialize(): void
+    {
+        parent::initialize();
+        
+        // Load the AdminLteForm helper for all views
+        $this->viewBuilder()->addHelper('AdminLteForm.AdminLteForm');
+    }
+
     /**
      * Page d'accueil du FormBuilder
      *

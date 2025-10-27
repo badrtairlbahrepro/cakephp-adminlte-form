@@ -29,6 +29,18 @@ class AdminLteFormHelper extends Helper
     protected FormHelper $Form;
 
     /**
+     * Initialize helpers
+     */
+    public function initialize(array $config): void
+    {
+        parent::initialize($config);
+        
+        // Initialize helper objects
+        $this->Html = $this->getView()->helpers()->load('Html');
+        $this->Form = $this->getView()->helpers()->load('Form');
+    }
+
+    /**
      * Champ texte avec icône
      * @param array<string, mixed> $options
      */
