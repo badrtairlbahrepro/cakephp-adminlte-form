@@ -2,14 +2,19 @@
 
 declare(strict_types=1);
 
-namespace App\View\Helper;
+namespace AdminLteForm\View\Helper;
 
 use Cake\View\Helper;
 use Cake\View\Helper\FormHelper;
 use Cake\View\Helper\HtmlHelper;
 
 /**
- * Helper AdminLTE pour les formulaires
+ * AdminLteForm Helper
+ * 
+ * A CakePHP helper for creating beautiful AdminLTE styled forms.
+ * Provides 12 methods for all form field types with icons, validation, and modern design.
+ * 
+ * @link https://github.com/badrtairlbahrepro/cakephp-adminlte-form-helper
  */
 class AdminLteFormHelper extends Helper
 {
