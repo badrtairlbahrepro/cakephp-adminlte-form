@@ -109,26 +109,14 @@ Une fois le helper chargé, utilisez-le dans n'importe quelle vue :
 
 Le plugin inclut un contrôleur de démonstration avec des exemples complets.
 
-### Activer les Routes de Démonstration
+### ✅ Routes de Démonstration Chargées Automatiquement
 
-Dans votre fichier `config/routes.php` :
+**Les routes sont chargées automatiquement** via le fichier `config/routes.php` du plugin.
+Aucune configuration manuelle n'est nécessaire !
 
-```php
-/**
- * FormBuilder Routes - Plugin AdminLteForm
- */
-$builder->scope('/form-builder', function (RouteBuilder $routes) {
-    $routes->connect('/', ['plugin' => 'AdminLteForm', 'controller' => 'FormBuilder', 'action' => 'index']);
-    $routes->connect('/contact', ['plugin' => 'AdminLteForm', 'controller' => 'FormBuilder', 'action' => 'contact']);
-    $routes->connect('/register', ['plugin' => 'AdminLteForm', 'controller' => 'FormBuilder', 'action' => 'register']);
-    $routes->connect('/profile', ['plugin' => 'AdminLteForm', 'controller' => 'FormBuilder', 'action' => 'profile']);
-    $routes->connect('/search', ['plugin' => 'AdminLteForm', 'controller' => 'FormBuilder', 'action' => 'search']);
-    $routes->connect('/multiple', ['plugin' => 'AdminLteForm', 'controller' => 'FormBuilder', 'action' => 'multiple']);
-    $routes->connect('/switches', ['plugin' => 'AdminLteForm', 'controller' => 'FormBuilder', 'action' => 'switches']);
-});
-```
+### 🎯 Accéder aux Exemples
 
-### Accéder aux Exemples
+Une fois le plugin chargé dans `Application.php`, accédez aux exemples :
 
 - **Accueil** : `http://localhost:8765/form-builder`
 - **Contact** : `http://localhost:8765/form-builder/contact`
