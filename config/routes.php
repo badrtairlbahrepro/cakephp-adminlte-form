@@ -8,13 +8,13 @@ declare(strict_types=1);
 use Cake\Routing\RouteBuilder;
 
 return function (RouteBuilder $builder) {
-    $builder->prefix('form', function (RouteBuilder $builder) {
-        $builder->connect('/', ['controller' => 'FormBuilder', 'action' => 'index']);
-        $builder->connect('/contact', ['controller' => 'FormBuilder', 'action' => 'contact']);
-        $builder->connect('/register', ['controller' => 'FormBuilder', 'action' => 'register']);
-        $builder->connect('/profile', ['controller' => 'FormBuilder', 'action' => 'profile']);
-        $builder->connect('/search', ['controller' => 'FormBuilder', 'action' => 'search']);
-        $builder->connect('/multiple', ['controller' => 'FormBuilder', 'action' => 'multiple']);
-        $builder->connect('/switches', ['controller' => 'FormBuilder', 'action' => 'switches']);
+    $builder->scope('/form-builder', function (RouteBuilder $builder) {
+        $builder->connect('/', ['plugin' => 'AdminLteForm', 'controller' => 'FormBuilder', 'action' => 'index']);
+        $builder->connect('/contact', ['plugin' => 'AdminLteForm', 'controller' => 'FormBuilder', 'action' => 'contact']);
+        $builder->connect('/register', ['plugin' => 'AdminLteForm', 'controller' => 'FormBuilder', 'action' => 'register']);
+        $builder->connect('/profile', ['plugin' => 'AdminLteForm', 'controller' => 'FormBuilder', 'action' => 'profile']);
+        $builder->connect('/search', ['plugin' => 'AdminLteForm', 'controller' => 'FormBuilder', 'action' => 'search']);
+        $builder->connect('/multiple', ['plugin' => 'AdminLteForm', 'controller' => 'FormBuilder', 'action' => 'multiple']);
+        $builder->connect('/switches', ['plugin' => 'AdminLteForm', 'controller' => 'FormBuilder', 'action' => 'switches']);
     });
 };
